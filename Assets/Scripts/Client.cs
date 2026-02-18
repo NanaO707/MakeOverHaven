@@ -1,16 +1,19 @@
 using UnityEngine;
 
-public class Client : MonoBehaviour
+[CreateAssetMenu]
+public class Client : ScriptableObject
 {
-    // Start is called once before the first execution of Update after the MonoBehaviour is created
-    void Start()
-    {
-        
-    }
+    public string[] StylePreference;
 
-    // Update is called once per frame
-    void Update()
-    {
-        
-    }
+    //cool is alt
+    //public enum Style { Cute, Cool, Athletic, Goth, Academia, Elegant };
+    
+    public int StylePointsGoal;
+
+    public int Budget;
+
+    public Sprite Icon;
+
+    public string BadReview = "...";
+    public string GoodReview = "...";
 }
