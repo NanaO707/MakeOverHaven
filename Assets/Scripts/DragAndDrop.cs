@@ -6,11 +6,29 @@ public class DragAndDrop : MonoBehaviour, IPointerDownHandler,IBeginDragHandler,
     [SerializeField] private Canvas canvas;
     private RectTransform rectTransform;
     private CanvasGroup canvasGroup;
+
+    [Header("Clothing Data")]
+    public ClothingItem ClothingData;
+
+    //Keeps track of its location so that we can return it if needed
+    private Transform originalParent;
+    private Vector2 originalAnchoredPosition;
+
     private void Awake()
     {
         rectTransform = GetComponent<RectTransform>();
         canvasGroup = GetComponent<CanvasGroup>();
     }
+    private void Start()
+    {
+        originalParent = transform.parent;
+        originalAnchoredPosition = rectTransform.anchoredPosition;
+    }
+    public void OnPointerDown(PointerEventData eventData)
+    {
+        Debug.Log("OnPointerDown");
+    }
+
     public void OnBeginDrag(PointerEventData eventData)
     {
         Debug.Log("OnBeginDrag");
@@ -31,18 +49,21 @@ public class DragAndDrop : MonoBehaviour, IPointerDownHandler,IBeginDragHandler,
         Debug.Log("OnEndDrag");
         canvasGroup.alpha = 1f;
         canvasGroup.blocksRaycasts = true;
+
+        // If not dropped on a valid target it will snap back to inventory
+        if (eventData.pointerEnter == null ||
+            (eventData.pointerEnter.GetComponent<ClothingTopSnap>() == null &&
+             eventData.pointerEnter.GetComponent<SellBin>() == null))
+        {
+            ReturnToInventory();
+        }
     }
 
-    public void OnPointerDown(PointerEventData eventData)
+    public void ReturnToInventory()
     {
-        Debug.Log("OnPointerDown");
+        transform.SetParent(originalParent);
+        rectTransform.anchoredPosition = originalAnchoredPosition;
     }
-
-    void Update()
-    {
-        
-    }
-
     public void OnDrop(PointerEventData eventData)
     {
         
