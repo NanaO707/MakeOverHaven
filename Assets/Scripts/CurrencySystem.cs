@@ -20,13 +20,21 @@ public class CurrencySystem : MonoBehaviour
 
     private void Awake()
     {
-        if(Instance == null || Instance != this) { Destroy(gameObject); return; }
+        if(Instance == null && Instance != this) { Destroy(gameObject); return; }
         Instance = this;
+    }
+
+    void HandleStatsChanged(int cost, int stylePoints)
+    {
+        RefreshUI();
     }
 
     void Start()
     {
         currentBudget = PlayerData.Instance != null ? PlayerData.Instance.Budget : 0;
+        GameManager.instance.OnStatsChanged += HandleStatsChanged;
+
+        RefreshUI();
     }
 
     //Refunds item cost if needed
