@@ -2593,7 +2593,7 @@ RectTransform:
   m_LocalEulerAnglesHint: {x: 0, y: 0, z: 0}
   m_AnchorMin: {x: 0, y: 1}
   m_AnchorMax: {x: 0, y: 1}
-  m_AnchoredPosition: {x: 210, y: -285}
+  m_AnchoredPosition: {x: 210, y: -250}
   m_SizeDelta: {x: 120, y: 120}
   m_Pivot: {x: 0.5, y: 0.5}
 --- !u!114 &156603814
@@ -3008,7 +3008,7 @@ RectTransform:
   m_AnchorMin: {x: 0.5, y: 0.5}
   m_AnchorMax: {x: 0.5, y: 0.5}
   m_AnchoredPosition: {x: 0, y: 20}
-  m_SizeDelta: {x: 100, y: 100}
+  m_SizeDelta: {x: 67, y: 67}
   m_Pivot: {x: 0.5, y: 0.5}
 --- !u!114 &171880409
 MonoBehaviour:
@@ -3128,7 +3128,7 @@ RectTransform:
   m_LocalEulerAnglesHint: {x: 0, y: 0, z: 0}
   m_AnchorMin: {x: 0, y: 1}
   m_AnchorMax: {x: 0, y: 1}
-  m_AnchoredPosition: {x: 210, y: -285}
+  m_AnchoredPosition: {x: 70, y: -395}
   m_SizeDelta: {x: 120, y: 120}
   m_Pivot: {x: 0.5, y: 0.5}
 --- !u!114 &190340115
@@ -3549,7 +3549,7 @@ RectTransform:
   m_LocalEulerAnglesHint: {x: 0, y: 0, z: 0}
   m_AnchorMin: {x: 0, y: 1}
   m_AnchorMax: {x: 0, y: 1}
-  m_AnchoredPosition: {x: 210, y: -140}
+  m_AnchoredPosition: {x: 210, y: -105}
   m_SizeDelta: {x: 120, y: 120}
   m_Pivot: {x: 0.5, y: 0.5}
 --- !u!114 &223141159
@@ -3837,6 +3837,7 @@ RectTransform:
   m_Children:
   - {fileID: 654295390}
   - {fileID: 1017283683}
+  - {fileID: 411405202}
   - {fileID: 1354059582}
   - {fileID: 2088403116}
   - {fileID: 1835988271}
@@ -4076,6 +4077,7 @@ GameObject:
   - component: {fileID: 256737608}
   - component: {fileID: 256737607}
   - component: {fileID: 256737606}
+  - component: {fileID: 256737609}
   m_Layer: 5
   m_Name: Icon
   m_TagString: Untagged
@@ -4100,7 +4102,7 @@ RectTransform:
   m_AnchorMin: {x: 0.5, y: 0.5}
   m_AnchorMax: {x: 0.5, y: 0.5}
   m_AnchoredPosition: {x: 0, y: 20}
-  m_SizeDelta: {x: 120, y: 120}
+  m_SizeDelta: {x: 162, y: 162}
   m_Pivot: {x: 0.5, y: 0.5}
 --- !u!114 &256737606
 MonoBehaviour:
@@ -4184,6 +4186,21 @@ CanvasRenderer:
   m_PrefabAsset: {fileID: 0}
   m_GameObject: {fileID: 256737604}
   m_CullTransparentMesh: 1
+--- !u!114 &256737609
+MonoBehaviour:
+  m_ObjectHideFlags: 0
+  m_CorrespondingSourceObject: {fileID: 0}
+  m_PrefabInstance: {fileID: 0}
+  m_PrefabAsset: {fileID: 0}
+  m_GameObject: {fileID: 256737604}
+  m_Enabled: 1
+  m_EditorHideFlags: 0
+  m_Script: {fileID: 11500000, guid: 247196dce372c774cb8d7564555eed87, type: 3}
+  m_Name: 
+  m_EditorClassIdentifier: Assembly-CSharp::DragAndDrop
+  canvas: {fileID: 548094988}
+  scrollRect: {fileID: 937447712}
+  ClothingData: {fileID: 11400000, guid: 6c7abef3656c5fb43b6e7f35f4f2d76f, type: 2}
 --- !u!1 &264037882
 GameObject:
   m_ObjectHideFlags: 0
@@ -4505,13 +4522,13 @@ RectTransform:
   m_LocalScale: {x: 1, y: 1, z: 1}
   m_ConstrainProportionsScale: 0
   m_Children:
-  - {fileID: 93904845}
   - {fileID: 256737605}
+  - {fileID: 93904845}
   m_Father: {fileID: 2143260092}
   m_LocalEulerAnglesHint: {x: 0, y: 0, z: 0}
   m_AnchorMin: {x: 0, y: 1}
   m_AnchorMax: {x: 0, y: 1}
-  m_AnchoredPosition: {x: 210, y: -250}
+  m_AnchoredPosition: {x: 210, y: -290}
   m_SizeDelta: {x: 120, y: 120}
   m_Pivot: {x: 0.5, y: 0.5}
 --- !u!114 &283520974
@@ -5628,6 +5645,95 @@ CanvasRenderer:
   m_PrefabInstance: {fileID: 0}
   m_PrefabAsset: {fileID: 0}
   m_GameObject: {fileID: 397424966}
+  m_CullTransparentMesh: 1
+--- !u!1 &411405201
+GameObject:
+  m_ObjectHideFlags: 0
+  m_CorrespondingSourceObject: {fileID: 0}
+  m_PrefabInstance: {fileID: 0}
+  m_PrefabAsset: {fileID: 0}
+  serializedVersion: 6
+  m_Component:
+  - component: {fileID: 411405202}
+  - component: {fileID: 411405205}
+  - component: {fileID: 411405204}
+  - component: {fileID: 411405203}
+  m_Layer: 5
+  m_Name: 'DressesSlot '
+  m_TagString: Untagged
+  m_Icon: {fileID: 0}
+  m_NavMeshLayer: 0
+  m_StaticEditorFlags: 0
+  m_IsActive: 1
+--- !u!224 &411405202
+RectTransform:
+  m_ObjectHideFlags: 0
+  m_CorrespondingSourceObject: {fileID: 0}
+  m_PrefabInstance: {fileID: 0}
+  m_PrefabAsset: {fileID: 0}
+  m_GameObject: {fileID: 411405201}
+  m_LocalRotation: {x: -0, y: -0, z: -0, w: 1}
+  m_LocalPosition: {x: 0, y: 0, z: -161.89996}
+  m_LocalScale: {x: 1, y: 1, z: 1}
+  m_ConstrainProportionsScale: 0
+  m_Children: []
+  m_Father: {fileID: 237531890}
+  m_LocalEulerAnglesHint: {x: 0, y: 0, z: 0}
+  m_AnchorMin: {x: 0.5, y: 0.5}
+  m_AnchorMax: {x: 0.5, y: 0.5}
+  m_AnchoredPosition: {x: 109, y: -22}
+  m_SizeDelta: {x: 80.282, y: 52.4074}
+  m_Pivot: {x: 0.5, y: 0.5}
+--- !u!114 &411405203
+MonoBehaviour:
+  m_ObjectHideFlags: 0
+  m_CorrespondingSourceObject: {fileID: 0}
+  m_PrefabInstance: {fileID: 0}
+  m_PrefabAsset: {fileID: 0}
+  m_GameObject: {fileID: 411405201}
+  m_Enabled: 1
+  m_EditorHideFlags: 0
+  m_Script: {fileID: 11500000, guid: 72678edfee1a2774caeab56afebad185, type: 3}
+  m_Name: 
+  m_EditorClassIdentifier: Assembly-CSharp::ClothingTopSnap
+  acceptedType: 0
+--- !u!114 &411405204
+MonoBehaviour:
+  m_ObjectHideFlags: 0
+  m_CorrespondingSourceObject: {fileID: 0}
+  m_PrefabInstance: {fileID: 0}
+  m_PrefabAsset: {fileID: 0}
+  m_GameObject: {fileID: 411405201}
+  m_Enabled: 1
+  m_EditorHideFlags: 0
+  m_Script: {fileID: 11500000, guid: fe87c0e1cc204ed48ad3b37840f39efc, type: 3}
+  m_Name: 
+  m_EditorClassIdentifier: UnityEngine.UI::UnityEngine.UI.Image
+  m_Material: {fileID: 0}
+  m_Color: {r: 1, g: 1, b: 1, a: 0.050980393}
+  m_RaycastTarget: 1
+  m_RaycastPadding: {x: 0, y: 0, z: 0, w: 0}
+  m_Maskable: 1
+  m_OnCullStateChanged:
+    m_PersistentCalls:
+      m_Calls: []
+  m_Sprite: {fileID: 0}
+  m_Type: 0
+  m_PreserveAspect: 0
+  m_FillCenter: 1
+  m_FillMethod: 4
+  m_FillAmount: 1
+  m_FillClockwise: 1
+  m_FillOrigin: 0
+  m_UseSpriteMesh: 0
+  m_PixelsPerUnitMultiplier: 1
+--- !u!222 &411405205
+CanvasRenderer:
+  m_ObjectHideFlags: 0
+  m_CorrespondingSourceObject: {fileID: 0}
+  m_PrefabInstance: {fileID: 0}
+  m_PrefabAsset: {fileID: 0}
+  m_GameObject: {fileID: 411405201}
   m_CullTransparentMesh: 1
 --- !u!1 &428649622
 GameObject:
@@ -7685,13 +7791,13 @@ RectTransform:
   m_LocalScale: {x: 1, y: 1, z: 1}
   m_ConstrainProportionsScale: 0
   m_Children:
-  - {fileID: 2139076349}
   - {fileID: 729780439}
+  - {fileID: 2139076349}
   m_Father: {fileID: 2143260092}
   m_LocalEulerAnglesHint: {x: 0, y: 0, z: 0}
   m_AnchorMin: {x: 0, y: 1}
   m_AnchorMax: {x: 0, y: 1}
-  m_AnchoredPosition: {x: 70, y: -105}
+  m_AnchoredPosition: {x: 70, y: -115}
   m_SizeDelta: {x: 120, y: 120}
   m_Pivot: {x: 0.5, y: 0.5}
 --- !u!114 &680608097
@@ -8658,6 +8764,7 @@ GameObject:
   - component: {fileID: 729780442}
   - component: {fileID: 729780441}
   - component: {fileID: 729780440}
+  - component: {fileID: 729780443}
   m_Layer: 5
   m_Name: Icon
   m_TagString: Untagged
@@ -8682,7 +8789,7 @@ RectTransform:
   m_AnchorMin: {x: 0.5, y: 0.5}
   m_AnchorMax: {x: 0.5, y: 0.5}
   m_AnchoredPosition: {x: 0, y: 20}
-  m_SizeDelta: {x: 120, y: 120}
+  m_SizeDelta: {x: 162, y: 162}
   m_Pivot: {x: 0.5, y: 0.5}
 --- !u!114 &729780440
 MonoBehaviour:
@@ -8766,6 +8873,21 @@ CanvasRenderer:
   m_PrefabAsset: {fileID: 0}
   m_GameObject: {fileID: 729780438}
   m_CullTransparentMesh: 1
+--- !u!114 &729780443
+MonoBehaviour:
+  m_ObjectHideFlags: 0
+  m_CorrespondingSourceObject: {fileID: 0}
+  m_PrefabInstance: {fileID: 0}
+  m_PrefabAsset: {fileID: 0}
+  m_GameObject: {fileID: 729780438}
+  m_Enabled: 1
+  m_EditorHideFlags: 0
+  m_Script: {fileID: 11500000, guid: 247196dce372c774cb8d7564555eed87, type: 3}
+  m_Name: 
+  m_EditorClassIdentifier: Assembly-CSharp::DragAndDrop
+  canvas: {fileID: 548094988}
+  scrollRect: {fileID: 937447712}
+  ClothingData: {fileID: 11400000, guid: 6c7abef3656c5fb43b6e7f35f4f2d76f, type: 2}
 --- !u!1 &736094823
 GameObject:
   m_ObjectHideFlags: 0
@@ -9073,7 +9195,7 @@ RectTransform:
   m_AnchorMin: {x: 0.5, y: 0.5}
   m_AnchorMax: {x: 0.5, y: 0.5}
   m_AnchoredPosition: {x: 0, y: 20}
-  m_SizeDelta: {x: 100, y: 100}
+  m_SizeDelta: {x: 67, y: 67}
   m_Pivot: {x: 0.5, y: 0.5}
 --- !u!114 &751926076
 MonoBehaviour:
@@ -9508,7 +9630,7 @@ RectTransform:
   m_AnchorMin: {x: 0.5, y: 0.5}
   m_AnchorMax: {x: 0.5, y: 0.5}
   m_AnchoredPosition: {x: 0, y: 20}
-  m_SizeDelta: {x: 100, y: 100}
+  m_SizeDelta: {x: 67, y: 67}
   m_Pivot: {x: 0.5, y: 0.5}
 --- !u!114 &781730946
 MonoBehaviour:
@@ -10458,13 +10580,13 @@ RectTransform:
   m_LocalScale: {x: 1, y: 1, z: 1}
   m_ConstrainProportionsScale: 0
   m_Children:
-  - {fileID: 276268699}
   - {fileID: 1942145846}
+  - {fileID: 276268699}
   m_Father: {fileID: 2143260092}
   m_LocalEulerAnglesHint: {x: 0, y: 0, z: 0}
   m_AnchorMin: {x: 0, y: 1}
   m_AnchorMax: {x: 0, y: 1}
-  m_AnchoredPosition: {x: 70, y: -250}
+  m_AnchoredPosition: {x: 70, y: -290}
   m_SizeDelta: {x: 120, y: 120}
   m_Pivot: {x: 0.5, y: 0.5}
 --- !u!114 &835601177
@@ -10658,6 +10780,7 @@ GameObject:
   - component: {fileID: 859903416}
   - component: {fileID: 859903415}
   - component: {fileID: 859903414}
+  - component: {fileID: 859903417}
   m_Layer: 5
   m_Name: Icon
   m_TagString: Untagged
@@ -10766,6 +10889,21 @@ CanvasRenderer:
   m_PrefabAsset: {fileID: 0}
   m_GameObject: {fileID: 859903412}
   m_CullTransparentMesh: 1
+--- !u!114 &859903417
+MonoBehaviour:
+  m_ObjectHideFlags: 0
+  m_CorrespondingSourceObject: {fileID: 0}
+  m_PrefabInstance: {fileID: 0}
+  m_PrefabAsset: {fileID: 0}
+  m_GameObject: {fileID: 859903412}
+  m_Enabled: 1
+  m_EditorHideFlags: 0
+  m_Script: {fileID: 11500000, guid: 247196dce372c774cb8d7564555eed87, type: 3}
+  m_Name: 
+  m_EditorClassIdentifier: Assembly-CSharp::DragAndDrop
+  canvas: {fileID: 548094988}
+  scrollRect: {fileID: 937447712}
+  ClothingData: {fileID: 11400000, guid: 09535b4a9508a584abb109bcb4cf4995, type: 2}
 --- !u!1 &937447710
 GameObject:
   m_ObjectHideFlags: 0
@@ -11832,6 +11970,7 @@ GameObject:
   - component: {fileID: 992442183}
   - component: {fileID: 992442182}
   - component: {fileID: 992442181}
+  - component: {fileID: 992442184}
   m_Layer: 5
   m_Name: Icon
   m_TagString: Untagged
@@ -11940,6 +12079,21 @@ CanvasRenderer:
   m_PrefabAsset: {fileID: 0}
   m_GameObject: {fileID: 992442179}
   m_CullTransparentMesh: 1
+--- !u!114 &992442184
+MonoBehaviour:
+  m_ObjectHideFlags: 0
+  m_CorrespondingSourceObject: {fileID: 0}
+  m_PrefabInstance: {fileID: 0}
+  m_PrefabAsset: {fileID: 0}
+  m_GameObject: {fileID: 992442179}
+  m_Enabled: 1
+  m_EditorHideFlags: 0
+  m_Script: {fileID: 11500000, guid: 247196dce372c774cb8d7564555eed87, type: 3}
+  m_Name: 
+  m_EditorClassIdentifier: Assembly-CSharp::DragAndDrop
+  canvas: {fileID: 548094988}
+  scrollRect: {fileID: 937447712}
+  ClothingData: {fileID: 11400000, guid: 09535b4a9508a584abb109bcb4cf4995, type: 2}
 --- !u!1 &1005302717
 GameObject:
   m_ObjectHideFlags: 0
@@ -12913,6 +13067,7 @@ GameObject:
   - component: {fileID: 1054407006}
   - component: {fileID: 1054407005}
   - component: {fileID: 1054407004}
+  - component: {fileID: 1054407007}
   m_Layer: 5
   m_Name: Icon
   m_TagString: Untagged
@@ -13021,6 +13176,21 @@ CanvasRenderer:
   m_PrefabAsset: {fileID: 0}
   m_GameObject: {fileID: 1054407002}
   m_CullTransparentMesh: 1
+--- !u!114 &1054407007
+MonoBehaviour:
+  m_ObjectHideFlags: 0
+  m_CorrespondingSourceObject: {fileID: 0}
+  m_PrefabInstance: {fileID: 0}
+  m_PrefabAsset: {fileID: 0}
+  m_GameObject: {fileID: 1054407002}
+  m_Enabled: 1
+  m_EditorHideFlags: 0
+  m_Script: {fileID: 11500000, guid: 247196dce372c774cb8d7564555eed87, type: 3}
+  m_Name: 
+  m_EditorClassIdentifier: Assembly-CSharp::DragAndDrop
+  canvas: {fileID: 548094988}
+  scrollRect: {fileID: 937447712}
+  ClothingData: {fileID: 11400000, guid: 09535b4a9508a584abb109bcb4cf4995, type: 2}
 --- !u!1 &1058098008
 GameObject:
   m_ObjectHideFlags: 0
@@ -13057,7 +13227,7 @@ RectTransform:
   m_LocalEulerAnglesHint: {x: 0, y: 0, z: 0}
   m_AnchorMin: {x: 0, y: 1}
   m_AnchorMax: {x: 0, y: 1}
-  m_AnchoredPosition: {x: 70, y: -140}
+  m_AnchoredPosition: {x: 70, y: -105}
   m_SizeDelta: {x: 120, y: 120}
   m_Pivot: {x: 0.5, y: 0.5}
 --- !u!114 &1058098010
@@ -15277,7 +15447,7 @@ RectTransform:
   m_LocalEulerAnglesHint: {x: 0, y: 0, z: 0}
   m_AnchorMin: {x: 0, y: 0.5}
   m_AnchorMax: {x: 0, y: 0.5}
-  m_AnchoredPosition: {x: 0, y: 225.00008}
+  m_AnchoredPosition: {x: 0, y: 224.99947}
   m_SizeDelta: {x: 275.44, y: 1542.6198}
   m_Pivot: {x: 0, y: 1}
 --- !u!114 &1295141375
@@ -15780,7 +15950,7 @@ RectTransform:
   m_LocalEulerAnglesHint: {x: 0, y: 0, z: 0}
   m_AnchorMin: {x: 0.5, y: 0.5}
   m_AnchorMax: {x: 0.5, y: 0.5}
-  m_AnchoredPosition: {x: 116.7, y: 97.900055}
+  m_AnchoredPosition: {x: 46, y: -33}
   m_SizeDelta: {x: 29.5877, y: 12.5752}
   m_Pivot: {x: 0.5, y: 0.5}
 --- !u!114 &1354059583
@@ -16638,6 +16808,7 @@ GameObject:
   - component: {fileID: 1412476284}
   - component: {fileID: 1412476283}
   - component: {fileID: 1412476282}
+  - component: {fileID: 1412476285}
   m_Layer: 5
   m_Name: Icon
   m_TagString: Untagged
@@ -16662,7 +16833,7 @@ RectTransform:
   m_AnchorMin: {x: 0.5, y: 0.5}
   m_AnchorMax: {x: 0.5, y: 0.5}
   m_AnchoredPosition: {x: 0, y: 20}
-  m_SizeDelta: {x: 120, y: 120}
+  m_SizeDelta: {x: 162, y: 162}
   m_Pivot: {x: 0.5, y: 0.5}
 --- !u!114 &1412476282
 MonoBehaviour:
@@ -16746,6 +16917,21 @@ CanvasRenderer:
   m_PrefabAsset: {fileID: 0}
   m_GameObject: {fileID: 1412476280}
   m_CullTransparentMesh: 1
+--- !u!114 &1412476285
+MonoBehaviour:
+  m_ObjectHideFlags: 0
+  m_CorrespondingSourceObject: {fileID: 0}
+  m_PrefabInstance: {fileID: 0}
+  m_PrefabAsset: {fileID: 0}
+  m_GameObject: {fileID: 1412476280}
+  m_Enabled: 1
+  m_EditorHideFlags: 0
+  m_Script: {fileID: 11500000, guid: 247196dce372c774cb8d7564555eed87, type: 3}
+  m_Name: 
+  m_EditorClassIdentifier: Assembly-CSharp::DragAndDrop
+  canvas: {fileID: 548094988}
+  scrollRect: {fileID: 937447712}
+  ClothingData: {fileID: 11400000, guid: 6c7abef3656c5fb43b6e7f35f4f2d76f, type: 2}
 --- !u!1 &1413520035
 GameObject:
   m_ObjectHideFlags: 0
@@ -17796,6 +17982,7 @@ GameObject:
   - component: {fileID: 1564370443}
   - component: {fileID: 1564370442}
   - component: {fileID: 1564370441}
+  - component: {fileID: 1564370444}
   m_Layer: 5
   m_Name: Icon
   m_TagString: Untagged
@@ -17904,6 +18091,21 @@ CanvasRenderer:
   m_PrefabAsset: {fileID: 0}
   m_GameObject: {fileID: 1564370439}
   m_CullTransparentMesh: 1
+--- !u!114 &1564370444
+MonoBehaviour:
+  m_ObjectHideFlags: 0
+  m_CorrespondingSourceObject: {fileID: 0}
+  m_PrefabInstance: {fileID: 0}
+  m_PrefabAsset: {fileID: 0}
+  m_GameObject: {fileID: 1564370439}
+  m_Enabled: 1
+  m_EditorHideFlags: 0
+  m_Script: {fileID: 11500000, guid: 247196dce372c774cb8d7564555eed87, type: 3}
+  m_Name: 
+  m_EditorClassIdentifier: Assembly-CSharp::DragAndDrop
+  canvas: {fileID: 548094988}
+  scrollRect: {fileID: 937447712}
+  ClothingData: {fileID: 11400000, guid: 09535b4a9508a584abb109bcb4cf4995, type: 2}
 --- !u!1 &1571004319
 GameObject:
   m_ObjectHideFlags: 0
@@ -19254,7 +19456,7 @@ RectTransform:
   m_LocalEulerAnglesHint: {x: 0, y: 0, z: 0}
   m_AnchorMin: {x: 0, y: 1}
   m_AnchorMax: {x: 0, y: 1}
-  m_AnchoredPosition: {x: 70, y: -285}
+  m_AnchoredPosition: {x: 70, y: -250}
   m_SizeDelta: {x: 120, y: 120}
   m_Pivot: {x: 0.5, y: 0.5}
 --- !u!114 &1665361932
@@ -19856,79 +20058,6 @@ CanvasRenderer:
   m_PrefabAsset: {fileID: 0}
   m_GameObject: {fileID: 1709308812}
   m_CullTransparentMesh: 1
---- !u!1001 &1711877059
-PrefabInstance:
-  m_ObjectHideFlags: 0
-  serializedVersion: 2
-  m_Modification:
-    serializedVersion: 3
-    m_TransformParent: {fileID: 0}
-    m_Modifications:
-    - target: {fileID: -8679921383154817045, guid: 88d892d06a4fec146aec832e466f55ef, type: 3}
-      propertyPath: m_LocalScale.x
-      value: 720.63715
-      objectReference: {fileID: 0}
-    - target: {fileID: -8679921383154817045, guid: 88d892d06a4fec146aec832e466f55ef, type: 3}
-      propertyPath: m_LocalScale.y
-      value: 720.63715
-      objectReference: {fileID: 0}
-    - target: {fileID: -8679921383154817045, guid: 88d892d06a4fec146aec832e466f55ef, type: 3}
-      propertyPath: m_LocalScale.z
-      value: 720.63715
-      objectReference: {fileID: 0}
-    - target: {fileID: -8679921383154817045, guid: 88d892d06a4fec146aec832e466f55ef, type: 3}
-      propertyPath: m_LocalPosition.x
-      value: 1192
-      objectReference: {fileID: 0}
-    - target: {fileID: -8679921383154817045, guid: 88d892d06a4fec146aec832e466f55ef, type: 3}
-      propertyPath: m_LocalPosition.y
-      value: 305
-      objectReference: {fileID: 0}
-    - target: {fileID: -8679921383154817045, guid: 88d892d06a4fec146aec832e466f55ef, type: 3}
-      propertyPath: m_LocalPosition.z
-      value: 101
-      objectReference: {fileID: 0}
-    - target: {fileID: -8679921383154817045, guid: 88d892d06a4fec146aec832e466f55ef, type: 3}
-      propertyPath: m_LocalRotation.w
-      value: -0.70585686
-      objectReference: {fileID: 0}
-    - target: {fileID: -8679921383154817045, guid: 88d892d06a4fec146aec832e466f55ef, type: 3}
-      propertyPath: m_LocalRotation.x
-      value: 0.042025186
-      objectReference: {fileID: 0}
-    - target: {fileID: -8679921383154817045, guid: 88d892d06a4fec146aec832e466f55ef, type: 3}
-      propertyPath: m_LocalRotation.y
-      value: 0.70585686
-      objectReference: {fileID: 0}
-    - target: {fileID: -8679921383154817045, guid: 88d892d06a4fec146aec832e466f55ef, type: 3}
-      propertyPath: m_LocalRotation.z
-      value: -0.04202517
-      objectReference: {fileID: 0}
-    - target: {fileID: -8679921383154817045, guid: 88d892d06a4fec146aec832e466f55ef, type: 3}
-      propertyPath: m_LocalEulerAnglesHint.x
-      value: 0
-      objectReference: {fileID: 0}
-    - target: {fileID: -8679921383154817045, guid: 88d892d06a4fec146aec832e466f55ef, type: 3}
-      propertyPath: m_LocalEulerAnglesHint.y
-      value: 270
-      objectReference: {fileID: 0}
-    - target: {fileID: -8679921383154817045, guid: 88d892d06a4fec146aec832e466f55ef, type: 3}
-      propertyPath: m_LocalEulerAnglesHint.z
-      value: 6.814
-      objectReference: {fileID: 0}
-    - target: {fileID: 919132149155446097, guid: 88d892d06a4fec146aec832e466f55ef, type: 3}
-      propertyPath: m_Name
-      value: test room
-      objectReference: {fileID: 0}
-    - target: {fileID: 919132149155446097, guid: 88d892d06a4fec146aec832e466f55ef, type: 3}
-      propertyPath: m_IsActive
-      value: 1
-      objectReference: {fileID: 0}
-    m_RemovedComponents: []
-    m_RemovedGameObjects: []
-    m_AddedGameObjects: []
-    m_AddedComponents: []
-  m_SourcePrefab: {fileID: 100100000, guid: 88d892d06a4fec146aec832e466f55ef, type: 3}
 --- !u!1 &1720169593
 GameObject:
   m_ObjectHideFlags: 0
@@ -21704,7 +21833,7 @@ RectTransform:
   m_AnchorMin: {x: 0.5, y: 0.5}
   m_AnchorMax: {x: 0.5, y: 0.5}
   m_AnchoredPosition: {x: 0.000022888184, y: 19.999641}
-  m_SizeDelta: {x: 100, y: 100}
+  m_SizeDelta: {x: 67, y: 67}
   m_Pivot: {x: 0.5, y: 0.5}
 --- !u!225 &1807178110
 CanvasGroup:
@@ -21731,8 +21860,8 @@ MonoBehaviour:
   m_Name: 
   m_EditorClassIdentifier: Assembly-CSharp::DragAndDrop
   canvas: {fileID: 548094988}
-  scrollRect: {fileID: 0}
-  ClothingData: {fileID: 0}
+  scrollRect: {fileID: 937447712}
+  ClothingData: {fileID: 11400000, guid: 45d884ce08ef87040a6bcba6099334b9, type: 2}
 --- !u!114 &1807178112
 MonoBehaviour:
   m_ObjectHideFlags: 0
@@ -22489,7 +22618,7 @@ RectTransform:
   m_LocalEulerAnglesHint: {x: 0, y: 0, z: 0}
   m_AnchorMin: {x: 0.5, y: 0.5}
   m_AnchorMax: {x: 0.5, y: 0.5}
-  m_AnchoredPosition: {x: 116.7, y: 138.37}
+  m_AnchoredPosition: {x: 114, y: 111.1}
   m_SizeDelta: {x: 41.9002, y: 37.3578}
   m_Pivot: {x: 0.5, y: 0.5}
 --- !u!114 &1835988272
@@ -23483,8 +23612,8 @@ MonoBehaviour:
   m_TargetGraphic: {fileID: 333864612}
   m_HandleRect: {fileID: 333864611}
   m_Direction: 2
-  m_Value: 1
-  m_Size: 0.29170167
+  m_Value: 1.0000006
+  m_Size: 0.2916573
   m_NumberOfSteps: 0
   m_OnValueChanged:
     m_PersistentCalls:
@@ -23640,7 +23769,7 @@ RectTransform:
   m_LocalEulerAnglesHint: {x: 0, y: 0, z: 0}
   m_AnchorMin: {x: 0, y: 1}
   m_AnchorMax: {x: 0, y: 1}
-  m_AnchoredPosition: {x: 210, y: -285}
+  m_AnchoredPosition: {x: 210, y: -395}
   m_SizeDelta: {x: 120, y: 120}
   m_Pivot: {x: 0.5, y: 0.5}
 --- !u!114 &1934763689
@@ -23693,6 +23822,7 @@ GameObject:
   - component: {fileID: 1942145849}
   - component: {fileID: 1942145848}
   - component: {fileID: 1942145847}
+  - component: {fileID: 1942145850}
   m_Layer: 5
   m_Name: Icon
   m_TagString: Untagged
@@ -23717,7 +23847,7 @@ RectTransform:
   m_AnchorMin: {x: 0.5, y: 0.5}
   m_AnchorMax: {x: 0.5, y: 0.5}
   m_AnchoredPosition: {x: 0, y: 20}
-  m_SizeDelta: {x: 120, y: 120}
+  m_SizeDelta: {x: 162, y: 162}
   m_Pivot: {x: 0.5, y: 0.5}
 --- !u!114 &1942145847
 MonoBehaviour:
@@ -23801,6 +23931,21 @@ CanvasRenderer:
   m_PrefabAsset: {fileID: 0}
   m_GameObject: {fileID: 1942145845}
   m_CullTransparentMesh: 1
+--- !u!114 &1942145850
+MonoBehaviour:
+  m_ObjectHideFlags: 0
+  m_CorrespondingSourceObject: {fileID: 0}
+  m_PrefabInstance: {fileID: 0}
+  m_PrefabAsset: {fileID: 0}
+  m_GameObject: {fileID: 1942145845}
+  m_Enabled: 1
+  m_EditorHideFlags: 0
+  m_Script: {fileID: 11500000, guid: 247196dce372c774cb8d7564555eed87, type: 3}
+  m_Name: 
+  m_EditorClassIdentifier: Assembly-CSharp::DragAndDrop
+  canvas: {fileID: 548094988}
+  scrollRect: {fileID: 937447712}
+  ClothingData: {fileID: 11400000, guid: 6c7abef3656c5fb43b6e7f35f4f2d76f, type: 2}
 --- !u!1 &1950688272
 GameObject:
   m_ObjectHideFlags: 0
@@ -24951,13 +25096,13 @@ RectTransform:
   m_LocalScale: {x: 1, y: 1, z: 1}
   m_ConstrainProportionsScale: 0
   m_Children:
-  - {fileID: 962630478}
   - {fileID: 1412476281}
+  - {fileID: 962630478}
   m_Father: {fileID: 2143260092}
   m_LocalEulerAnglesHint: {x: 0, y: 0, z: 0}
   m_AnchorMin: {x: 0, y: 1}
   m_AnchorMax: {x: 0, y: 1}
-  m_AnchoredPosition: {x: 210, y: -105}
+  m_AnchoredPosition: {x: 210, y: -115}
   m_SizeDelta: {x: 120, y: 120}
   m_Pivot: {x: 0.5, y: 0.5}
 --- !u!114 &2054531471
@@ -25527,7 +25672,7 @@ RectTransform:
   m_PrefabAsset: {fileID: 0}
   m_GameObject: {fileID: 2108004226}
   m_LocalRotation: {x: -0, y: -0, z: -0, w: 1}
-  m_LocalPosition: {x: 0, y: 0, z: 0.000030517578}
+  m_LocalPosition: {x: 0, y: 0, z: 0}
   m_LocalScale: {x: 1.6716998, y: 1.6716998, z: 1.6716998}
   m_ConstrainProportionsScale: 0
   m_Children: []
@@ -25601,6 +25746,7 @@ GameObject:
   - component: {fileID: 2115458118}
   - component: {fileID: 2115458117}
   - component: {fileID: 2115458116}
+  - component: {fileID: 2115458119}
   m_Layer: 5
   m_Name: Icon
   m_TagString: Untagged
@@ -25709,6 +25855,21 @@ CanvasRenderer:
   m_PrefabAsset: {fileID: 0}
   m_GameObject: {fileID: 2115458114}
   m_CullTransparentMesh: 1
+--- !u!114 &2115458119
+MonoBehaviour:
+  m_ObjectHideFlags: 0
+  m_CorrespondingSourceObject: {fileID: 0}
+  m_PrefabInstance: {fileID: 0}
+  m_PrefabAsset: {fileID: 0}
+  m_GameObject: {fileID: 2115458114}
+  m_Enabled: 1
+  m_EditorHideFlags: 0
+  m_Script: {fileID: 11500000, guid: 247196dce372c774cb8d7564555eed87, type: 3}
+  m_Name: 
+  m_EditorClassIdentifier: Assembly-CSharp::DragAndDrop
+  canvas: {fileID: 548094988}
+  scrollRect: {fileID: 937447712}
+  ClothingData: {fileID: 11400000, guid: 09535b4a9508a584abb109bcb4cf4995, type: 2}
 --- !u!1 &2123620309
 GameObject:
   m_ObjectHideFlags: 0
@@ -26199,13 +26360,13 @@ MonoBehaviour:
   m_Padding:
     m_Left: 10
     m_Right: 0
-    m_Top: 45
+    m_Top: 55
     m_Bottom: 0
   m_ChildAlignment: 0
   m_StartCorner: 0
   m_StartAxis: 0
   m_CellSize: {x: 120, y: 120}
-  m_Spacing: {x: 20, y: 25}
+  m_Spacing: {x: 20, y: 55}
   m_Constraint: 0
   m_ConstraintCount: 2
 --- !u!1 &2144766399
@@ -26293,5 +26454,4 @@ SceneRoots:
   - {fileID: 1621453434}
   - {fileID: 1725976289}
   - {fileID: 548094989}
-  - {fileID: 1711877059}
   - {fileID: 1303828895}
