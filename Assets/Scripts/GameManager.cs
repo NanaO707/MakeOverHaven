@@ -3,6 +3,10 @@ using UnityEngine;
 public class GameManager : MonoBehaviour
 {
 
+    [SerializeField] AudioClip clothingWoosh;
+    [SerializeField] AudioClip spendMoney;
+    AudioSource audioSource;
+
     public static GameManager instance; //to access anywhere
 
     public int CurrentCost { get; private set; }
@@ -46,6 +50,7 @@ public class GameManager : MonoBehaviour
 
         CurrencySystem.Instance.Spend(cost);
         Notify();
+        audioSource.PlayOneShot(clothingWoosh);
     }
     public void RemoveClothing(int cost, int stylePoints)
     {
@@ -54,5 +59,7 @@ public class GameManager : MonoBehaviour
 
         CurrencySystem.Instance.Refund(cost);
         Notify();
+        audioSource.PlayOneShot(spendMoney);
+
     }
 }
