@@ -1,29 +1,45 @@
 using UnityEngine;
 using UnityEngine.EventSystems;
+using UnityEngine.UI;
 
-public class DragAndDrop : MonoBehaviour, IPointerDownHandler,IBeginDragHandler,IEndDragHandler, IDragHandler, IDropHandler
+public class DragAndDrop : MonoBehaviour, IPointerDownHandler, IBeginDragHandler, IEndDragHandler, IDragHandler
 {
     [SerializeField] private Canvas canvas;
+    [SerializeField] private ScrollRect scrollRect;
+
     private RectTransform rectTransform;
     private CanvasGroup canvasGroup;
 
     [Header("Clothing Data")]
     public ClothingItem ClothingData;
 
-    //Keeps track of its location so that we can return it if needed
+    // keeps track of the location so that we can return if need be
     private Transform originalParent;
     private Vector2 originalAnchoredPosition;
+
+    // tracks if the current drag ended on a proper target
+    private bool wasDropped;
+
+    //tracks which slot this item is currently in
+    private ClothingTopSnap currentSlot;
 
     private void Awake()
     {
         rectTransform = GetComponent<RectTransform>();
         canvasGroup = GetComponent<CanvasGroup>();
+
+        if (canvasGroup == null)
+        {
+            canvasGroup = gameObject.AddComponent<CanvasGroup>();
+        }
     }
+
     private void Start()
     {
         originalParent = transform.parent;
         originalAnchoredPosition = rectTransform.anchoredPosition;
     }
+
     public void OnPointerDown(PointerEventData eventData)
     {
         Debug.Log("OnPointerDown");
@@ -32,28 +48,51 @@ public class DragAndDrop : MonoBehaviour, IPointerDownHandler,IBeginDragHandler,
     public void OnBeginDrag(PointerEventData eventData)
     {
         Debug.Log("OnBeginDrag");
+
+        wasDropped = false;
+
+        //clears the slot first if item was already in a slot
+        if (currentSlot != null)
+        {
+            currentSlot.ClearSlot();
+            currentSlot = null;
+        }
+
+        //stop the scroll view from fighting the drag
+        if (scrollRect != null)
+        {
+            scrollRect.enabled = false;
+        }
+
+        //move item to canvas while dragging so it appears on top
+        transform.SetParent(canvas.transform);
+
         canvasGroup.alpha = 0.7f;
         canvasGroup.blocksRaycasts = false;
     }
 
     public void OnDrag(PointerEventData eventData)
     {
-        //drag event 
         Debug.Log("OnDrag");
-        //calculates movement and takes into account rect transform scale of canvas so it follows the mouse properly
+
+        // make the item follow the mouse
         rectTransform.anchoredPosition += eventData.delta / canvas.scaleFactor;
     }
 
     public void OnEndDrag(PointerEventData eventData)
     {
         Debug.Log("OnEndDrag");
+
         canvasGroup.alpha = 1f;
         canvasGroup.blocksRaycasts = true;
 
-        // If not dropped on a valid target it will snap back to inventory
-        if (eventData.pointerEnter == null ||
-            (eventData.pointerEnter.GetComponent<ClothingTopSnap>() == null &&
-             eventData.pointerEnter.GetComponent<SellBin>() == null))
+        if (scrollRect != null)
+        {
+            scrollRect.enabled = true;
+        }
+
+        // it'll return to inventory if not dropped on a proper area 
+        if (!wasDropped)
         {
             ReturnToInventory();
         }
@@ -63,9 +102,17 @@ public class DragAndDrop : MonoBehaviour, IPointerDownHandler,IBeginDragHandler,
     {
         transform.SetParent(originalParent);
         rectTransform.anchoredPosition = originalAnchoredPosition;
+        currentSlot = null;
     }
-    public void OnDrop(PointerEventData eventData)
+
+    public void SetDropped(bool value)
     {
-        
+        wasDropped = value;
+    }
+
+    public void SetCurrentSlot(ClothingTopSnap slot)
+    {
+        currentSlot = slot;
     }
 }
+
