@@ -12,7 +12,12 @@ public class GameManager : MonoBehaviour
 
     private void Awake()
     {
-        instance = this; //check later 
+        if (instance != null && instance != this)
+        {
+            Destroy(gameObject);
+            return;
+        }
+        instance = this;
     }
     // Start is called once before the first execution of Update after the MonoBehaviour is created
     void Start()
@@ -24,5 +29,30 @@ public class GameManager : MonoBehaviour
     void Update()
     {
         
+    }
+
+    public bool IsOverBudget()
+    {
+        return CurrencySystem.Instance.CurrentBudget < 0; //we dont continue past the level otherwise
+    }
+    void Notify()
+    {
+        OnStatsChanged?.Invoke(CurrentCost, CurrentStylePoints);
+    }
+    public void AddClothing(int cost, int stylePoints)
+    {
+        CurrentCost += cost;
+        CurrentStylePoints += stylePoints;
+
+        CurrencySystem.Instance.Spend(cost);
+        Notify();
+    }
+    public void RemoveClothing(int cost, int stylePoints)
+    {
+        CurrentCost -= cost;
+        CurrentStylePoints -= stylePoints;
+
+        CurrencySystem.Instance.Refund(cost);
+        Notify();
     }
 }
