@@ -18,6 +18,13 @@ public class CurrencySystem : MonoBehaviour
     private int currentBudget;
     public int CurrentBudget => currentBudget;
 
+    public void SetBudget(int amount)
+    {
+        currentBudget = amount;
+        PlayerData.Instance?.SetBudget(amount);
+        RefreshUI();
+    }
+
     private void Awake()
     {
         if(Instance != null && Instance != this) { Destroy(gameObject); return; }
