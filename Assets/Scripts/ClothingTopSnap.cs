@@ -5,6 +5,7 @@ public class ClothingTopSnap : MonoBehaviour, IDropHandler
 {
     [Header("Slot Settings")]
     [SerializeField] private ClothingItem.Type acceptedType;
+    [SerializeField] private Vector2 slotOffset = Vector2.zero;
 
     // The item in the slot
     private GameObject currentItem;
@@ -47,7 +48,14 @@ public class ClothingTopSnap : MonoBehaviour, IDropHandler
 
         // snaps item to the center of the slot xD
         RectTransform droppedRect = droppedObj.GetComponent<RectTransform>();
-        droppedRect.anchoredPosition = Vector2.zero;
+        droppedRect.anchoredPosition = slotOffset;
+        //droppedRect.anchoredPosition = Vector2.zero;
+
+        CanvasGroup canvasGroup = droppedObj.GetComponent<CanvasGroup>();
+        if (canvasGroup != null)
+        {
+            canvasGroup.blocksRaycasts = false;
+        }
 
         // stores the item as the current slot 
         currentItem = droppedObj;
