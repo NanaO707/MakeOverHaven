@@ -10,10 +10,10 @@ MonoBehaviour:
   m_Enabled: 1
   m_EditorHideFlags: 0
   m_Script: {fileID: 11500000, guid: 311c995d1a31d294fb61248ae414f6af, type: 3}
-  m_Name: HairStyleData_01 3
+  m_Name: DressesData_03
   m_EditorClassIdentifier: Assembly-CSharp::ClothingItem
-  ClothingName: Pink Hair
-  ClothingType: 2
-  stylePts: 30
-  Price: 20
-  Icon: {fileID: 21300000, guid: 94a1f827d622d6446bcff6f543998d6a, type: 3}
+  ClothingName: Fancy Pink Dress
+  ClothingType: 0
+  stylePts: 60
+  Price: 67
+  Icon: {fileID: 21300000, guid: aacd61da69810fc41bd59fb11262f967, type: 3}
