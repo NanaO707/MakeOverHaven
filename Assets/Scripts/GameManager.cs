@@ -2,7 +2,9 @@ using UnityEngine;
 
 public class GameManager : MonoBehaviour
 {
-
+    [SerializeField] public Client client;
+    [SerializeField] public Client client2;
+    [SerializeField] public Client client3;
     [SerializeField] AudioClip clothingWoosh;
     [SerializeField] AudioClip spendMoney;
     AudioSource audioSource;
@@ -22,11 +24,31 @@ public class GameManager : MonoBehaviour
             return;
         }
         instance = this;
+        //DontDestroyOnLoad(gameObject);
+
     }
     // Start is called once before the first execution of Update after the MonoBehaviour is created
     void Start()
     {
-        
+        audioSource = GetComponent<AudioSource>();
+        PlayerData.Instance.ResetAll();
+        PlayerData.Instance.InitializeBudget(client.Budget);
+    }
+    public void NewLevel(int level)
+    {
+        CurrentCost = 0;
+        CurrentStylePoints = 0;
+        if (level == 2)
+        {
+            client = client2;
+        }
+        else if (level == 3)
+        {
+            client = client3;
+        }
+        PlayerData.Instance.SetBudget(client.Budget);
+        CurrencySystem.Instance.SetBudget(client.Budget);
+
     }
 
     // Update is called once per frame

@@ -24,7 +24,8 @@ public class PlayerData : MonoBehaviour
     //Public Setters
     public void InitializeBudget(int startBudget) { Budget = startBudget; }
 
-    public void SetBudget(int newBudget) { Budget = newBudget; }
+    public void SetBudget(int newBudget) { Budget = newBudget; 
+    }
 
     public void AddScore(float stars) {  TotalScore += stars; }
 
