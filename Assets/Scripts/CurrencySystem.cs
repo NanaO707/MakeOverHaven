@@ -38,6 +38,14 @@ public class CurrencySystem : MonoBehaviour
         RefreshUI();
     }
 
+    private void Update()
+    {
+        RefreshUI();
+    }
+    public void SetText(TextMeshProUGUI text)
+    {
+       budgetText = text;
+    }
     //Refunds item cost if needed
     public void Spend(int amount)
     {
@@ -63,8 +71,10 @@ public class CurrencySystem : MonoBehaviour
             budgetText.color = isPositive ? positiveColor : negativeColor;
     }
 
-    internal void SetBudget(int budget)
+    public void SetBudget(int amount)
     {
-        
+        currentBudget = amount;
+        PlayerData.Instance?.SetBudget(amount);
+        RefreshUI();
     }
 }

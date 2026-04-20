@@ -10,6 +10,12 @@ public class MainMenuManager : MonoBehaviour
         SceneManager.LoadScene(levelToLoad); //loads scene
     }
 
+    public void ResetGame()
+    {
+       GameManager.instance.DestroyGameManager();
+       SceneManager.LoadScene("MainMenu"); //loads scene
+    }
+
     public void QuitGame()
     {
         Application.Quit(); //quits game

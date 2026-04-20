@@ -54,7 +54,6 @@ public class GameManager : MonoBehaviour
     // Update is called once per frame
     void Update()
     {
-        
     }
 
     public bool IsOverBudget()
@@ -83,5 +82,11 @@ public class GameManager : MonoBehaviour
         Notify();
         audioSource.PlayOneShot(spendMoney);
 
+    }
+    
+    public void DestroyGameManager()
+    {
+        PlayerData.Instance.ResetAll();
+        Destroy(gameObject);
     }
 }

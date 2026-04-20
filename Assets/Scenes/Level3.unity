@@ -6958,8 +6958,8 @@ MonoBehaviour:
   m_TargetGraphic: {fileID: 657486401}
   m_HandleRect: {fileID: 657486400}
   m_Direction: 2
-  m_Value: 1.0000006
-  m_Size: 0.29171076
+  m_Value: 1.0000005
+  m_Size: 0.2916759
   m_NumberOfSteps: 0
   m_OnValueChanged:
     m_PersistentCalls:
@@ -18246,7 +18246,7 @@ RectTransform:
   m_LocalEulerAnglesHint: {x: 0, y: 0, z: 0}
   m_AnchorMin: {x: 0, y: 0.5}
   m_AnchorMax: {x: 0, y: 0.5}
-  m_AnchoredPosition: {x: 0, y: 224.99936}
+  m_AnchoredPosition: {x: 0, y: 224.99959}
   m_SizeDelta: {x: 275.44, y: 1542.6198}
   m_Pivot: {x: 0, y: 1}
 --- !u!114 &1425671077
@@ -19538,6 +19538,7 @@ GameObject:
   - component: {fileID: 1519193387}
   - component: {fileID: 1519193388}
   - component: {fileID: 1519193389}
+  - component: {fileID: 1519193390}
   m_Layer: 5
   m_Name: Budget
   m_TagString: Untagged
@@ -19664,6 +19665,18 @@ MonoBehaviour:
   m_hasFontAssetChanged: 0
   m_baseMaterial: {fileID: 0}
   m_maskOffset: {x: 0, y: 0, z: 0, w: 0}
+--- !u!114 &1519193390
+MonoBehaviour:
+  m_ObjectHideFlags: 0
+  m_CorrespondingSourceObject: {fileID: 0}
+  m_PrefabInstance: {fileID: 0}
+  m_PrefabAsset: {fileID: 0}
+  m_GameObject: {fileID: 1519193386}
+  m_Enabled: 1
+  m_EditorHideFlags: 0
+  m_Script: {fileID: 11500000, guid: fb1105d5e040c0145bf38c73f17afab3, type: 3}
+  m_Name: 
+  m_EditorClassIdentifier: Assembly-CSharp::BudgetText
 --- !u!1 &1528147609
 GameObject:
   m_ObjectHideFlags: 0
@@ -19929,7 +19942,7 @@ MonoBehaviour:
   m_PrefabInstance: {fileID: 0}
   m_PrefabAsset: {fileID: 0}
   m_GameObject: {fileID: 1543079115}
-  m_Enabled: 1
+  m_Enabled: 0
   m_EditorHideFlags: 0
   m_Script: {fileID: 11500000, guid: c6f99eb71a089e441ad37d28116da7c1, type: 3}
   m_Name: 

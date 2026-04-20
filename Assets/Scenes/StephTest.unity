@@ -267,6 +267,7 @@ GameObject:
   - component: {fileID: 77143437}
   - component: {fileID: 77143439}
   - component: {fileID: 77143438}
+  - component: {fileID: 77143440}
   m_Layer: 5
   m_Name: Image
   m_TagString: Untagged
@@ -332,6 +333,23 @@ CanvasRenderer:
   m_PrefabAsset: {fileID: 0}
   m_GameObject: {fileID: 77143436}
   m_CullTransparentMesh: 1
+--- !u!111 &77143440
+Animation:
+  m_ObjectHideFlags: 0
+  m_CorrespondingSourceObject: {fileID: 0}
+  m_PrefabInstance: {fileID: 0}
+  m_PrefabAsset: {fileID: 0}
+  m_GameObject: {fileID: 77143436}
+  m_Enabled: 1
+  serializedVersion: 4
+  m_Animation: {fileID: 7400000, guid: 9f3b30819d8d47445bf9bf0b4d0ab991, type: 2}
+  m_Animations:
+  - {fileID: 7400000, guid: 9f3b30819d8d47445bf9bf0b4d0ab991, type: 2}
+  m_WrapMode: 0
+  m_PlayAutomatically: 1
+  m_AnimatePhysics: 0
+  m_UpdateMode: 0
+  m_CullingType: 0
 --- !u!1 &93710669
 GameObject:
   m_ObjectHideFlags: 0
@@ -343,6 +361,7 @@ GameObject:
   - component: {fileID: 93710670}
   - component: {fileID: 93710672}
   - component: {fileID: 93710671}
+  - component: {fileID: 93710673}
   m_Layer: 5
   m_Name: Text (TMP) (1)
   m_TagString: Untagged
@@ -469,6 +488,20 @@ CanvasRenderer:
   m_PrefabAsset: {fileID: 0}
   m_GameObject: {fileID: 93710669}
   m_CullTransparentMesh: 1
+--- !u!114 &93710673
+MonoBehaviour:
+  m_ObjectHideFlags: 0
+  m_CorrespondingSourceObject: {fileID: 0}
+  m_PrefabInstance: {fileID: 0}
+  m_PrefabAsset: {fileID: 0}
+  m_GameObject: {fileID: 93710669}
+  m_Enabled: 1
+  m_EditorHideFlags: 0
+  m_Script: {fileID: 11500000, guid: efc4479cf09ad244bbadc52e8dc33992, type: 3}
+  m_Name: 
+  m_EditorClassIdentifier: Assembly-CSharp::AddReview
+  reviewText: {fileID: 93710671}
+  clientNum: 2
 --- !u!1 &102426770
 GameObject:
   m_ObjectHideFlags: 0
@@ -1195,7 +1228,7 @@ MonoBehaviour:
   m_OnCullStateChanged:
     m_PersistentCalls:
       m_Calls: []
-  m_text: Username
+  m_text: AnyaXOXO
   m_isRightToLeft: 0
   m_fontAsset: {fileID: 11400000, guid: 8f586378b4e144a9851e7b34d9b748ee, type: 2}
   m_sharedMaterial: {fileID: 2180264, guid: 8f586378b4e144a9851e7b34d9b748ee, type: 2}
@@ -1287,7 +1320,6 @@ GameObject:
   - component: {fileID: 329115089}
   - component: {fileID: 329115088}
   - component: {fileID: 329115087}
-  - component: {fileID: 329115091}
   m_Layer: 5
   m_Name: ReviewsScreen
   m_TagString: Untagged
@@ -1379,103 +1411,6 @@ RectTransform:
   m_AnchoredPosition: {x: 0, y: 0}
   m_SizeDelta: {x: 0, y: 0}
   m_Pivot: {x: 0, y: 0}
---- !u!82 &329115091
-AudioSource:
-  m_ObjectHideFlags: 0
-  m_CorrespondingSourceObject: {fileID: 0}
-  m_PrefabInstance: {fileID: 0}
-  m_PrefabAsset: {fileID: 0}
-  m_GameObject: {fileID: 329115086}
-  m_Enabled: 1
-  serializedVersion: 4
-  OutputAudioMixerGroup: {fileID: 0}
-  m_audioClip: {fileID: 0}
-  m_Resource: {fileID: 8300000, guid: 0a938223ac072af43898b2195daaeda4, type: 3}
-  m_PlayOnAwake: 1
-  m_Volume: 1
-  m_Pitch: 1
-  Loop: 0
-  Mute: 0
-  Spatialize: 0
-  SpatializePostEffects: 0
-  Priority: 128
-  DopplerLevel: 1
-  MinDistance: 1
-  MaxDistance: 500
-  Pan2D: 0
-  rolloffMode: 0
-  BypassEffects: 0
-  BypassListenerEffects: 0
-  BypassReverbZones: 0
-  rolloffCustomCurve:
-    serializedVersion: 2
-    m_Curve:
-    - serializedVersion: 3
-      time: 0
-      value: 1
-      inSlope: 0
-      outSlope: 0
-      tangentMode: 0
-      weightedMode: 0
-      inWeight: 0.33333334
-      outWeight: 0.33333334
-    - serializedVersion: 3
-      time: 1
-      value: 0
-      inSlope: 0
-      outSlope: 0
-      tangentMode: 0
-      weightedMode: 0
-      inWeight: 0.33333334
-      outWeight: 0.33333334
-    m_PreInfinity: 2
-    m_PostInfinity: 2
-    m_RotationOrder: 4
-  panLevelCustomCurve:
-    serializedVersion: 2
-    m_Curve:
-    - serializedVersion: 3
-      time: 0
-      value: 0
-      inSlope: 0
-      outSlope: 0
-      tangentMode: 0
-      weightedMode: 0
-      inWeight: 0.33333334
-      outWeight: 0.33333334
-    m_PreInfinity: 2
-    m_PostInfinity: 2
-    m_RotationOrder: 4
-  spreadCustomCurve:
-    serializedVersion: 2
-    m_Curve:
-    - serializedVersion: 3
-      time: 0
-      value: 0
-      inSlope: 0
-      outSlope: 0
-      tangentMode: 0
-      weightedMode: 0
-      inWeight: 0.33333334
-      outWeight: 0.33333334
-    m_PreInfinity: 2
-    m_PostInfinity: 2
-    m_RotationOrder: 4
-  reverbZoneMixCustomCurve:
-    serializedVersion: 2
-    m_Curve:
-    - serializedVersion: 3
-      time: 0
-      value: 1
-      inSlope: 0
-      outSlope: 0
-      tangentMode: 0
-      weightedMode: 0
-      inWeight: 0.33333334
-      outWeight: 0.33333334
-    m_PreInfinity: 2
-    m_PostInfinity: 2
-    m_RotationOrder: 4
 --- !u!1 &337757766
 GameObject:
   m_ObjectHideFlags: 0
@@ -1895,7 +1830,7 @@ MonoBehaviour:
   m_OnCullStateChanged:
     m_PersistentCalls:
       m_Calls: []
-  m_text: Username
+  m_text: DNguyen
   m_isRightToLeft: 0
   m_fontAsset: {fileID: 11400000, guid: 8f586378b4e144a9851e7b34d9b748ee, type: 2}
   m_sharedMaterial: {fileID: 2180264, guid: 8f586378b4e144a9851e7b34d9b748ee, type: 2}
@@ -2160,6 +2095,7 @@ GameObject:
   - component: {fileID: 506992934}
   - component: {fileID: 506992936}
   - component: {fileID: 506992935}
+  - component: {fileID: 506992937}
   m_Layer: 5
   m_Name: Text (TMP) (1)
   m_TagString: Untagged
@@ -2286,6 +2222,20 @@ CanvasRenderer:
   m_PrefabAsset: {fileID: 0}
   m_GameObject: {fileID: 506992933}
   m_CullTransparentMesh: 1
+--- !u!114 &506992937
+MonoBehaviour:
+  m_ObjectHideFlags: 0
+  m_CorrespondingSourceObject: {fileID: 0}
+  m_PrefabInstance: {fileID: 0}
+  m_PrefabAsset: {fileID: 0}
+  m_GameObject: {fileID: 506992933}
+  m_Enabled: 1
+  m_EditorHideFlags: 0
+  m_Script: {fileID: 11500000, guid: efc4479cf09ad244bbadc52e8dc33992, type: 3}
+  m_Name: 
+  m_EditorClassIdentifier: Assembly-CSharp::AddReview
+  reviewText: {fileID: 506992935}
+  clientNum: 1
 --- !u!1 &531636427
 GameObject:
   m_ObjectHideFlags: 0
@@ -2447,6 +2397,7 @@ GameObject:
   - component: {fileID: 598450970}
   - component: {fileID: 598450972}
   - component: {fileID: 598450971}
+  - component: {fileID: 598450973}
   m_Layer: 5
   m_Name: SHADOW bubble 1
   m_TagString: Untagged
@@ -2512,6 +2463,23 @@ CanvasRenderer:
   m_PrefabAsset: {fileID: 0}
   m_GameObject: {fileID: 598450969}
   m_CullTransparentMesh: 1
+--- !u!111 &598450973
+Animation:
+  m_ObjectHideFlags: 0
+  m_CorrespondingSourceObject: {fileID: 0}
+  m_PrefabInstance: {fileID: 0}
+  m_PrefabAsset: {fileID: 0}
+  m_GameObject: {fileID: 598450969}
+  m_Enabled: 1
+  serializedVersion: 4
+  m_Animation: {fileID: 7400000, guid: 05b2bac20f7590249bc6557138ffda23, type: 2}
+  m_Animations:
+  - {fileID: 7400000, guid: 05b2bac20f7590249bc6557138ffda23, type: 2}
+  m_WrapMode: 0
+  m_PlayAutomatically: 1
+  m_AnimatePhysics: 0
+  m_UpdateMode: 0
+  m_CullingType: 0
 --- !u!1 &623139748
 GameObject:
   m_ObjectHideFlags: 0
@@ -2598,7 +2566,7 @@ MonoBehaviour:
       m_Calls:
       - m_Target: {fileID: 623139753}
         m_TargetAssemblyTypeName: MainMenuManager, Assembly-CSharp
-        m_MethodName: PlayGame
+        m_MethodName: ResetGame
         m_Mode: 1
         m_Arguments:
           m_ObjectArgument: {fileID: 0}
@@ -2716,7 +2684,7 @@ MonoBehaviour:
   m_OnCullStateChanged:
     m_PersistentCalls:
       m_Calls: []
-  m_text: Username
+  m_text: '*_Mizi_*'
   m_isRightToLeft: 0
   m_fontAsset: {fileID: 11400000, guid: 8f586378b4e144a9851e7b34d9b748ee, type: 2}
   m_sharedMaterial: {fileID: 2180264, guid: 8f586378b4e144a9851e7b34d9b748ee, type: 2}
@@ -3371,6 +3339,7 @@ GameObject:
   - component: {fileID: 874124313}
   - component: {fileID: 874124315}
   - component: {fileID: 874124314}
+  - component: {fileID: 874124316}
   m_Layer: 5
   m_Name: Text (TMP) (1)
   m_TagString: Untagged
@@ -3497,6 +3466,20 @@ CanvasRenderer:
   m_PrefabAsset: {fileID: 0}
   m_GameObject: {fileID: 874124312}
   m_CullTransparentMesh: 1
+--- !u!114 &874124316
+MonoBehaviour:
+  m_ObjectHideFlags: 0
+  m_CorrespondingSourceObject: {fileID: 0}
+  m_PrefabInstance: {fileID: 0}
+  m_PrefabAsset: {fileID: 0}
+  m_GameObject: {fileID: 874124312}
+  m_Enabled: 1
+  m_EditorHideFlags: 0
+  m_Script: {fileID: 11500000, guid: efc4479cf09ad244bbadc52e8dc33992, type: 3}
+  m_Name: 
+  m_EditorClassIdentifier: Assembly-CSharp::AddReview
+  reviewText: {fileID: 874124314}
+  clientNum: 3
 --- !u!1 &908461564
 GameObject:
   m_ObjectHideFlags: 0
@@ -3728,6 +3711,7 @@ GameObject:
   - component: {fileID: 949382863}
   - component: {fileID: 949382865}
   - component: {fileID: 949382864}
+  - component: {fileID: 949382866}
   m_Layer: 5
   m_Name: Image
   m_TagString: Untagged
@@ -3793,6 +3777,23 @@ CanvasRenderer:
   m_PrefabAsset: {fileID: 0}
   m_GameObject: {fileID: 949382862}
   m_CullTransparentMesh: 1
+--- !u!111 &949382866
+Animation:
+  m_ObjectHideFlags: 0
+  m_CorrespondingSourceObject: {fileID: 0}
+  m_PrefabInstance: {fileID: 0}
+  m_PrefabAsset: {fileID: 0}
+  m_GameObject: {fileID: 949382862}
+  m_Enabled: 1
+  serializedVersion: 4
+  m_Animation: {fileID: 7400000, guid: 9f3b30819d8d47445bf9bf0b4d0ab991, type: 2}
+  m_Animations:
+  - {fileID: 7400000, guid: 9f3b30819d8d47445bf9bf0b4d0ab991, type: 2}
+  m_WrapMode: 0
+  m_PlayAutomatically: 1
+  m_AnimatePhysics: 0
+  m_UpdateMode: 0
+  m_CullingType: 0
 --- !u!1 &988840284
 GameObject:
   m_ObjectHideFlags: 0
@@ -3883,6 +3884,7 @@ GameObject:
   - component: {fileID: 1019050683}
   - component: {fileID: 1019050685}
   - component: {fileID: 1019050684}
+  - component: {fileID: 1019050686}
   m_Layer: 5
   m_Name: SHADOW bubble 3
   m_TagString: Untagged
@@ -3948,6 +3950,23 @@ CanvasRenderer:
   m_PrefabAsset: {fileID: 0}
   m_GameObject: {fileID: 1019050682}
   m_CullTransparentMesh: 1
+--- !u!111 &1019050686
+Animation:
+  m_ObjectHideFlags: 0
+  m_CorrespondingSourceObject: {fileID: 0}
+  m_PrefabInstance: {fileID: 0}
+  m_PrefabAsset: {fileID: 0}
+  m_GameObject: {fileID: 1019050682}
+  m_Enabled: 1
+  serializedVersion: 4
+  m_Animation: {fileID: 7400000, guid: 05b2bac20f7590249bc6557138ffda23, type: 2}
+  m_Animations:
+  - {fileID: 7400000, guid: 05b2bac20f7590249bc6557138ffda23, type: 2}
+  m_WrapMode: 0
+  m_PlayAutomatically: 1
+  m_AnimatePhysics: 0
+  m_UpdateMode: 0
+  m_CullingType: 0
 --- !u!1 &1054219027
 GameObject:
   m_ObjectHideFlags: 0
@@ -4188,6 +4207,7 @@ GameObject:
   - component: {fileID: 1248388769}
   - component: {fileID: 1248388771}
   - component: {fileID: 1248388770}
+  - component: {fileID: 1248388772}
   m_Layer: 5
   m_Name: Image
   m_TagString: Untagged
@@ -4253,6 +4273,23 @@ CanvasRenderer:
   m_PrefabAsset: {fileID: 0}
   m_GameObject: {fileID: 1248388768}
   m_CullTransparentMesh: 1
+--- !u!111 &1248388772
+Animation:
+  m_ObjectHideFlags: 0
+  m_CorrespondingSourceObject: {fileID: 0}
+  m_PrefabInstance: {fileID: 0}
+  m_PrefabAsset: {fileID: 0}
+  m_GameObject: {fileID: 1248388768}
+  m_Enabled: 1
+  serializedVersion: 4
+  m_Animation: {fileID: 7400000, guid: 9f3b30819d8d47445bf9bf0b4d0ab991, type: 2}
+  m_Animations:
+  - {fileID: 7400000, guid: 9f3b30819d8d47445bf9bf0b4d0ab991, type: 2}
+  m_WrapMode: 0
+  m_PlayAutomatically: 1
+  m_AnimatePhysics: 0
+  m_UpdateMode: 0
+  m_CullingType: 0
 --- !u!1 &1339885230
 GameObject:
   m_ObjectHideFlags: 0
@@ -4483,6 +4520,7 @@ GameObject:
   - component: {fileID: 1409462233}
   - component: {fileID: 1409462235}
   - component: {fileID: 1409462234}
+  - component: {fileID: 1409462236}
   m_Layer: 5
   m_Name: SHADOW bubble 2
   m_TagString: Untagged
@@ -4548,6 +4586,23 @@ CanvasRenderer:
   m_PrefabAsset: {fileID: 0}
   m_GameObject: {fileID: 1409462232}
   m_CullTransparentMesh: 1
+--- !u!111 &1409462236
+Animation:
+  m_ObjectHideFlags: 0
+  m_CorrespondingSourceObject: {fileID: 0}
+  m_PrefabInstance: {fileID: 0}
+  m_PrefabAsset: {fileID: 0}
+  m_GameObject: {fileID: 1409462232}
+  m_Enabled: 1
+  serializedVersion: 4
+  m_Animation: {fileID: 7400000, guid: 05b2bac20f7590249bc6557138ffda23, type: 2}
+  m_Animations:
+  - {fileID: 7400000, guid: 05b2bac20f7590249bc6557138ffda23, type: 2}
+  m_WrapMode: 0
+  m_PlayAutomatically: 1
+  m_AnimatePhysics: 0
+  m_UpdateMode: 0
+  m_CullingType: 0
 --- !u!1 &1502518646
 GameObject:
   m_ObjectHideFlags: 0
