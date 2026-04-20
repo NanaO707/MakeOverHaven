@@ -1,6 +1,7 @@
 using UnityEngine;
 using UnityEngine.UI;
 using TMPro;
+using System;
 
 public class CurrencySystem : MonoBehaviour
 {
@@ -62,4 +63,8 @@ public class CurrencySystem : MonoBehaviour
             budgetText.color = isPositive ? positiveColor : negativeColor;
     }
 
+    internal void SetBudget(int budget)
+    {
+        
+    }
 }

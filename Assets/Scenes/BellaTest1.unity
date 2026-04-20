@@ -3867,11 +3867,11 @@ RectTransform:
   m_LocalScale: {x: 1, y: 1, z: 1}
   m_ConstrainProportionsScale: 0
   m_Children:
-  - {fileID: 654295390}
+  - {fileID: 2088403116}
   - {fileID: 1017283683}
+  - {fileID: 654295390}
   - {fileID: 411405202}
   - {fileID: 1354059582}
-  - {fileID: 2088403116}
   - {fileID: 1835988271}
   m_Father: {fileID: 1956518063}
   m_LocalEulerAnglesHint: {x: 0, y: 0, z: 0}
@@ -15591,7 +15591,7 @@ RectTransform:
   m_LocalEulerAnglesHint: {x: 0, y: 0, z: 0}
   m_AnchorMin: {x: 0, y: 0.5}
   m_AnchorMax: {x: 0, y: 0.5}
-  m_AnchoredPosition: {x: 0, y: 224.99931}
+  m_AnchoredPosition: {x: 0, y: 224.99995}
   m_SizeDelta: {x: 275.44, y: 1542.6198}
   m_Pivot: {x: 0, y: 1}
 --- !u!114 &1295141375
@@ -16077,7 +16077,7 @@ GameObject:
   m_Icon: {fileID: 0}
   m_NavMeshLayer: 0
   m_StaticEditorFlags: 0
-  m_IsActive: 1
+  m_IsActive: 0
 --- !u!224 &1354059582
 RectTransform:
   m_ObjectHideFlags: 0
@@ -16094,7 +16094,7 @@ RectTransform:
   m_LocalEulerAnglesHint: {x: 0, y: 0, z: 0}
   m_AnchorMin: {x: 0.5, y: 0.5}
   m_AnchorMax: {x: 0.5, y: 0.5}
-  m_AnchoredPosition: {x: 118, y: 84}
+  m_AnchoredPosition: {x: 275, y: 84}
   m_SizeDelta: {x: 29.5877, y: 12.5752}
   m_Pivot: {x: 0.5, y: 0.5}
 --- !u!114 &1354059583
@@ -23820,8 +23820,8 @@ MonoBehaviour:
   m_TargetGraphic: {fileID: 333864612}
   m_HandleRect: {fileID: 333864611}
   m_Direction: 2
-  m_Value: 1.0000007
-  m_Size: 0.29171157
+  m_Value: 1.0000001
+  m_Size: 0.29171014
   m_NumberOfSteps: 0
   m_OnValueChanged:
     m_PersistentCalls:
