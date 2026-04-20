@@ -18,13 +18,14 @@ public class PlayerData : MonoBehaviour
     {
         if (Instance != null && Instance != this) { Destroy(gameObject); return; }
         Instance = this;
-       // DontDestroyOnLoad(gameObject);
+        DontDestroyOnLoad(gameObject);
     }
 
     //Public Setters
     public void InitializeBudget(int startBudget) { Budget = startBudget; }
 
-    public void SetBudget(int newBudget) { Budget = newBudget; }
+    public void SetBudget(int newBudget) { Budget = newBudget; 
+    }
 
     public void AddScore(float stars) {  TotalScore += stars; }
 
