@@ -12,9 +12,8 @@ MonoBehaviour:
   m_Script: {fileID: 11500000, guid: a9953cd9f4eac5c429faecf0c07716d7, type: 3}
   m_Name: Diane
   m_EditorClassIdentifier: Assembly-CSharp::Client
-  StylePointsGoal: 200
+  StylePointsGoal: 80
   Budget: 355
   Icon: {fileID: 21300000, guid: 4d0d3931630333846a08d7883abf8252, type: 3}
-  Name: Diane
   BadReview: I was kind of hoping for better...
   GoodReview: Surpassed my expectations!

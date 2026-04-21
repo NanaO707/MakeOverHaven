@@ -12,9 +12,8 @@ MonoBehaviour:
   m_Script: {fileID: 11500000, guid: a9953cd9f4eac5c429faecf0c07716d7, type: 3}
   m_Name: Anya
   m_EditorClassIdentifier: Assembly-CSharp::Client
-  StylePointsGoal: 100
+  StylePointsGoal: 55
   Budget: 200
   Icon: {fileID: 21300000, guid: 0b1fd31b5122a0e408b702be683ba766, type: 3}
-  Name: Anya
   BadReview: This place is lacking...
   GoodReview: THE place for makeovers!

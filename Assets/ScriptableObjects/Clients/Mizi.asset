@@ -12,9 +12,8 @@ MonoBehaviour:
   m_Script: {fileID: 11500000, guid: a9953cd9f4eac5c429faecf0c07716d7, type: 3}
   m_Name: Mizi
   m_EditorClassIdentifier: Assembly-CSharp::Client
-  StylePointsGoal: 350
+  StylePointsGoal: 120
   Budget: 660
   Icon: {fileID: 21300000, guid: 35291228cd18aa24c855ec3342f5ea96, type: 3}
-  Name: Mizi
   BadReview: Barely got a passing grade to me...
   GoodReview: SO FUN! I'll bring my girlfriend next time!
