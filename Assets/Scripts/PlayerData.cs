@@ -2,6 +2,7 @@ using UnityEngine;
 
 public class PlayerData : MonoBehaviour
 {
+    //in order to access this class instance from anywhere
     public static PlayerData Instance {  get; private set; }
 
     //Total budget left after purchases
@@ -16,16 +17,17 @@ public class PlayerData : MonoBehaviour
     
     private void Awake()
     {
+        //only one of these should exist
         if (Instance != null && Instance != this) { Destroy(gameObject); return; }
         Instance = this;
+        //this should stay in between level switches without getting destroyed
         DontDestroyOnLoad(gameObject);
     }
 
     //Public Setters
     public void InitializeBudget(int startBudget) { Budget = startBudget; }
 
-    public void SetBudget(int newBudget) { Budget = newBudget; 
-    }
+    public void SetBudget(int newBudget) { Budget = newBudget; }
 
     public void AddScore(float stars) {  TotalScore += stars; }
 

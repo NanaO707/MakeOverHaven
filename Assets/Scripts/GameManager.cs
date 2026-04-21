@@ -18,16 +18,14 @@ public class GameManager : MonoBehaviour
 
     private void Awake()
     {
+        //make sure that we dont have copies of this we can only have one game manager at once
         if (instance != null && instance != this)
         {
             Destroy(gameObject);
             return;
         }
         instance = this;
-        //DontDestroyOnLoad(gameObject);
-
     }
-    // Start is called once before the first execution of Update after the MonoBehaviour is created
     void Start()
     {
         audioSource = GetComponent<AudioSource>();
@@ -36,8 +34,10 @@ public class GameManager : MonoBehaviour
     }
     public void NewLevel(int level)
     {
+        //reset values 
         CurrentCost = 0;
         CurrentStylePoints = 0;
+        //change client
         if (level == 2)
         {
             client = client2;
@@ -46,14 +46,9 @@ public class GameManager : MonoBehaviour
         {
             client = client3;
         }
+        //update the budget
         PlayerData.Instance.SetBudget(client.Budget);
         CurrencySystem.Instance.SetBudget(client.Budget);
-
-    }
-
-    // Update is called once per frame
-    void Update()
-    {
     }
 
     public bool IsOverBudget()
@@ -62,13 +57,16 @@ public class GameManager : MonoBehaviour
     }
     void Notify()
     {
+        //detects when the cost and style points have changed (action delegate) and calls the listeners attached to cost and style
         OnStatsChanged?.Invoke(CurrentCost, CurrentStylePoints);
     }
     public void AddClothing(int cost, int stylePoints)
     {
+        //increase the cost and style accordingly
         CurrentCost += cost;
         CurrentStylePoints += stylePoints;
 
+        //spend from your budget
         CurrencySystem.Instance.Spend(cost);
         Notify();
         audioSource.PlayOneShot(clothingWoosh);
@@ -84,7 +82,8 @@ public class GameManager : MonoBehaviour
 
     }
     
-    public void DestroyGameManager()
+    public void DestroyGameManager() //how to destroy this object for a clean slate
+        //it usually doesnt get destroyed cause its attached to the player data
     {
         PlayerData.Instance.ResetAll();
         Destroy(gameObject);

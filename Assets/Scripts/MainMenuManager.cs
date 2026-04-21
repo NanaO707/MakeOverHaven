@@ -12,8 +12,8 @@ public class MainMenuManager : MonoBehaviour
 
     public void ResetGame()
     {
-       GameManager.instance.DestroyGameManager();
-       SceneManager.LoadScene("MainMenu"); //loads scene
+       GameManager.instance.DestroyGameManager(); //destroy the game manager because it is a dont destroy on load
+       SceneManager.LoadScene("MainMenu"); //loads main menu
     }
 
     public void QuitGame()
