@@ -10,10 +10,10 @@ MonoBehaviour:
   m_Enabled: 1
   m_EditorHideFlags: 0
   m_Script: {fileID: 11500000, guid: 311c995d1a31d294fb61248ae414f6af, type: 3}
-  m_Name: TopData_01
+  m_Name: TopData_02
   m_EditorClassIdentifier: Assembly-CSharp::ClothingItem
-  ClothingName: Cutesy Pink Top
+  ClothingName: Cutesy Black Top
   ClothingType: 0
-  stylePts: 23
-  Price: 34
-  Icon: {fileID: 21300000, guid: 6bc2b1d78926800498301fa97e243f1e, type: 3}
+  stylePts: 26
+  Price: 39
+  Icon: {fileID: 21300000, guid: 4c51aa2fbd0873246963ccee27986400, type: 3}
