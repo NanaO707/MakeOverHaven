@@ -25,9 +25,11 @@ public class DragAndDrop : MonoBehaviour, IPointerDownHandler, IBeginDragHandler
 
     private void Awake()
     {
+        // gets ui components
         rectTransform = GetComponent<RectTransform>();
         canvasGroup = GetComponent<CanvasGroup>();
 
+        //adds a canvas group if none exist
         if (canvasGroup == null)
         {
             canvasGroup = gameObject.AddComponent<CanvasGroup>();
@@ -36,6 +38,7 @@ public class DragAndDrop : MonoBehaviour, IPointerDownHandler, IBeginDragHandler
 
     private void Start()
     {
+        //saves original inventory location to reset
         originalParent = transform.parent;
         originalAnchoredPosition = rectTransform.anchoredPosition;
     }
@@ -84,9 +87,11 @@ public class DragAndDrop : MonoBehaviour, IPointerDownHandler, IBeginDragHandler
     {
         Debug.Log("OnEndDrag");
 
+        //reset image and raycasts
         canvasGroup.alpha = 1f;
         canvasGroup.blocksRaycasts = true;
 
+        //scrollview on after dragging is done
         if (scrollRect != null)
         {
             scrollRect.enabled = true;
@@ -102,14 +107,17 @@ public class DragAndDrop : MonoBehaviour, IPointerDownHandler, IBeginDragHandler
 
     public void ReturnToInventory()
     {
+        //sends item back to inventory parent 
         transform.SetParent(originalParent);
-        rectTransform.anchoredPosition = originalAnchoredPosition;
+        rectTransform.anchoredPosition = originalAnchoredPosition; //back to inventory original pos
         currentSlot = null;
 
         //raycasts back on so items can be dragged after once again
         canvasGroup.blocksRaycasts = true;
 
     }
+
+    //remove style points and cost from game instance 
     public static void RefundDrop(DragAndDrop script)
     {
         GameManager.instance.RemoveClothing(script.ClothingData.Price, script.ClothingData.stylePts);
@@ -117,12 +125,12 @@ public class DragAndDrop : MonoBehaviour, IPointerDownHandler, IBeginDragHandler
     }
     public void SetDropped(bool value)
     {
-        wasDropped = value;
+        wasDropped = value; //confirms drop works
     }
 
     public void SetCurrentSlot(ClothingTopSnap slot)
     {
-        currentSlot = slot;
+        currentSlot = slot; //store item slot 
     }
 }
 
