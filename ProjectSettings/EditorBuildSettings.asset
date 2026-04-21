@@ -11,18 +11,27 @@ EditorBuildSettings:
   - enabled: 1
     path: Assets/Scenes/BellaTest1.unity
     guid: ff55c322a1d0d03468340db37229e178
-  - enabled: 1
-    path: Assets/Scenes/Level1.unity
+  - enabled: 0
+    path: Assets/Scenes/Level1Old.unity
     guid: 8da5218835910b946a325ed8f914e599
-  - enabled: 1
-    path: Assets/Scenes/Level2.unity
+  - enabled: 0
+    path: Assets/Scenes/Level2Old.unity
     guid: 22654a705b9998f44921040f72f3cc28
-  - enabled: 1
-    path: Assets/Scenes/Level3.unity
+  - enabled: 0
+    path: Assets/Scenes/Level3Old.unity
     guid: 5743f167b0b64c34ead024ac4b6b8e5b
   - enabled: 1
     path: Assets/Scenes/StephTest.unity
     guid: e9287c027d49d114199d194786bbb0ff
+  - enabled: 1
+    path: Assets/Scenes/Level1.unity
+    guid: 4612d7a0bb5d449479c18f4465565dfe
+  - enabled: 1
+    path: Assets/Scenes/Level2.unity
+    guid: 9df763248bf073b4f9bd67b099bda44c
+  - enabled: 1
+    path: Assets/Scenes/Level3.unity
+    guid: b7ac477d743631a468c17da5d0444fdf
   m_configObjects:
     com.unity.input.settings.actions: {fileID: -944628639613478452, guid: 052faaac586de48259a63d0c4782560b, type: 3}
   m_UseUCBPForAssetBundles: 0
