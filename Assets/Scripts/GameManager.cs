@@ -32,6 +32,7 @@ public class GameManager : MonoBehaviour
         PlayerData.Instance.ResetAll();
         PlayerData.Instance.InitializeBudget(client.Budget);
         CurrencySystem.Instance.SetBudget(client.Budget);
+        PlayerData.Instance.SetMaxBudget(client.Budget);
 
     }
     private void Update()
@@ -53,6 +54,7 @@ public class GameManager : MonoBehaviour
             client = client3;
         }
         //update the budget
+        PlayerData.Instance.SetMaxBudget(client.Budget);
         PlayerData.Instance.SetBudget(client.Budget);
         CurrencySystem.Instance.SetBudget(client.Budget);
     }

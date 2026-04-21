@@ -40,6 +40,7 @@ public class ClothingTopSnap : MonoBehaviour, IDropHandler
             if (oldItem != null)
             {
                 oldItem.ReturnToInventory();
+                DragAndDrop.RefundDrop(oldItem);
             }
         }
 

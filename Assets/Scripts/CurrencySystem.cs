@@ -55,9 +55,18 @@ public class CurrencySystem : MonoBehaviour
     }
     public void Refund(int amount)
     {
-        currentBudget += amount;
-        PlayerData.Instance?.SetBudget(currentBudget);
-        RefreshUI();
+        if (currentBudget + amount > PlayerData.Instance.MaxBudget)
+        {
+            currentBudget = PlayerData.Instance.MaxBudget;
+            PlayerData.Instance?.SetBudget(currentBudget);
+            RefreshUI();
+        }
+        else
+        {
+            currentBudget += amount;
+            PlayerData.Instance?.SetBudget(currentBudget);
+            RefreshUI();
+        }
     }
 
     private void RefreshUI()

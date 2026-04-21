@@ -7,6 +7,7 @@ public class PlayerData : MonoBehaviour
 
     //Total budget left after purchases
     public int Budget {  get; private set; }
+    public int MaxBudget {  get; private set; }
 
     //for the review at the end of the level
     public float TotalScore { get; private set; }
@@ -28,6 +29,7 @@ public class PlayerData : MonoBehaviour
     public void InitializeBudget(int startBudget) { Budget = startBudget; }
 
     public void SetBudget(int newBudget) { Budget = newBudget; }
+    public void SetMaxBudget(int newBudget) { MaxBudget = newBudget; }
 
     public void AddScore(float stars) {  TotalScore += stars; }
 

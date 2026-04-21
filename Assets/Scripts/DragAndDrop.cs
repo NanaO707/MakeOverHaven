@@ -64,9 +64,10 @@ public class DragAndDrop : MonoBehaviour, IPointerDownHandler, IBeginDragHandler
             scrollRect.enabled = false;
         }
 
+      
         //move item to canvas while dragging so it appears on top
         transform.SetParent(canvas.transform);
-
+       
         canvasGroup.alpha = 0.7f;
         canvasGroup.blocksRaycasts = false;
     }
@@ -90,11 +91,12 @@ public class DragAndDrop : MonoBehaviour, IPointerDownHandler, IBeginDragHandler
         {
             scrollRect.enabled = true;
         }
-
+        GameManager.instance.AddClothing(ClothingData.Price, ClothingData.stylePts);
         // it'll return to inventory if not dropped on a proper area 
         if (!wasDropped)
         {
             ReturnToInventory();
+            GameManager.instance.RemoveClothing(ClothingData.Price, ClothingData.stylePts);
         }
     }
 
@@ -103,8 +105,13 @@ public class DragAndDrop : MonoBehaviour, IPointerDownHandler, IBeginDragHandler
         transform.SetParent(originalParent);
         rectTransform.anchoredPosition = originalAnchoredPosition;
         currentSlot = null;
+       
     }
+    public static void RefundDrop(DragAndDrop script)
+    {
+        GameManager.instance.RemoveClothing(script.ClothingData.Price, script.ClothingData.stylePts);
 
+    }
     public void SetDropped(bool value)
     {
         wasDropped = value;
