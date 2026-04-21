@@ -14,10 +14,11 @@ public class SellBin : MonoBehaviour, IDropHandler
 
         // Refund the item price
         if (dragAndDrop.ClothingData != null)
-            CurrencySystem.Instance?.Refund(dragAndDrop.ClothingData.Price);
+
+        GameManager.instance.RemoveClothing(dragAndDrop.ClothingData.Price, dragAndDrop.ClothingData.stylePts);
 
         // Clear the snap slot so no clothing appears on it
-        ClothingTopSnap snapSlot = droppedObj.GetComponentInParent<ClothingTopSnap>();
+       ClothingTopSnap snapSlot = droppedObj.GetComponentInParent<ClothingTopSnap>();
         snapSlot?.ClearSlot();
 
         dragAndDrop.ReturnToInventory();

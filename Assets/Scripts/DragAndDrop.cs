@@ -105,7 +105,10 @@ public class DragAndDrop : MonoBehaviour, IPointerDownHandler, IBeginDragHandler
         transform.SetParent(originalParent);
         rectTransform.anchoredPosition = originalAnchoredPosition;
         currentSlot = null;
-       
+
+        //raycasts back on so items can be dragged after once again
+        canvasGroup.blocksRaycasts = true;
+
     }
     public static void RefundDrop(DragAndDrop script)
     {
