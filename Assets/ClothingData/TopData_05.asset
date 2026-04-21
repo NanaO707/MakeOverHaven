@@ -12,8 +12,8 @@ MonoBehaviour:
   m_Script: {fileID: 11500000, guid: 311c995d1a31d294fb61248ae414f6af, type: 3}
   m_Name: TopData_05
   m_EditorClassIdentifier: Assembly-CSharp::ClothingItem
-  ClothingName: Cutesy Pink Top
+  ClothingName: Off Shoulder Blue Top
   ClothingType: 0
-  stylePts: 30
-  Price: 34
-  Icon: {fileID: 21300000, guid: 6bc2b1d78926800498301fa97e243f1e, type: 3}
+  stylePts: 22
+  Price: 30
+  Icon: {fileID: 21300000, guid: 658390ef704a2e8459f5ce8674bc3c40, type: 3}

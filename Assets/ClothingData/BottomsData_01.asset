@@ -12,8 +12,8 @@ MonoBehaviour:
   m_Script: {fileID: 11500000, guid: 311c995d1a31d294fb61248ae414f6af, type: 3}
   m_Name: BottomsData_01
   m_EditorClassIdentifier: Assembly-CSharp::ClothingItem
-  ClothingName: Light Jeans
+  ClothingName: Black Skirt
   ClothingType: 1
-  stylePts: 10
-  Price: 45
-  Icon: {fileID: 21300000, guid: 00172b1a915037945b17af98310abf0d, type: 3}
+  stylePts: 30
+  Price: 32
+  Icon: {fileID: 21300000, guid: 8c2999289cba9874485517568f89008e, type: 3}
