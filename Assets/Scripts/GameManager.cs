@@ -31,6 +31,12 @@ public class GameManager : MonoBehaviour
         audioSource = GetComponent<AudioSource>();
         PlayerData.Instance.ResetAll();
         PlayerData.Instance.InitializeBudget(client.Budget);
+        CurrencySystem.Instance.SetBudget(client.Budget);
+
+    }
+    private void Update()
+    {
+        Debug.Log("Current Style Pts: " + CurrentStylePoints + " Current Budget: " + PlayerData.Instance.Budget);
     }
     public void NewLevel(int level)
     {

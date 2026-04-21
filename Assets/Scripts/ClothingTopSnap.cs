@@ -63,6 +63,8 @@ public class ClothingTopSnap : MonoBehaviour, IDropHandler
         // tells the dragged object that the drop was valid
         dragAndDrop.SetDropped(true);
         dragAndDrop.SetCurrentSlot(this);
+
+        //CLOTHING CONFIRMED
     }
 
     // clears the item ref when it leaves the slot
